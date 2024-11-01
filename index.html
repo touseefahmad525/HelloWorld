@@ -1,47 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, #4158d0, #c850c0);
+    }
+
+    .container-table100 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    table {
+        width: 100%;
+        max-width: 800px;
+        border-collapse: collapse;
+        background: white;
+        margin: auto;
+    }
+
+    thead {
+        background: #36304a;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    th {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
+
+    td {
+        font-size: 15px;
+        color: #808080;
+    }
+    td.column5 {
+        text-align: center;
+    }
+
+    /* Responsive css  */
+    @media (max-width: 768px) {
+
+        table,
+        thead,
+        tbody,
+        tr,
+        td,
+        th {
+            display: block;
+        }
+
+        thead {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding-left: 50%;
+            position: relative;
+        }
+
+        td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-size: 14px;
+            color: #999;
+            font-weight: bold;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container-table100 {
+            padding: 15px;
+        }
+
+        td {
+            padding: 10px;
+            /* Adjust small screen */
+        }
+    }
+</style>
+
 <body>
-    <table border="2px">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Touseef</td>
-            <td>touseef@gmail.com</td>
-            <td>Pakistan</td>
-        </tr>
-        <tr>
-            <td>Ali</td>
-            <td>ali@gmail.com</td>
-            <td>Japan</td>
-        </tr>
-        <tr>
-            <td>Waqas</td>
-            <td>waqas@gmail.com</td>
-            <td>America</td>
-        </tr>
-        <tr>
-            <td>Noman</td>
-            <td>noman@gmail.com</td>
-            <td>India</td>
-        </tr>
-        <tr>
-            <td>Hammad</td>
-            <td>hammad@gmail.com</td>
-            <td>Turkey</td>
-        </tr>
-        <tr>
-            <td>Jalil</td>
-            <td>jalil@gmail.com</td>
-            <td>Pakistan</td>
-        </tr>
-    </table>
+    <div class="container-table100">
+        <table>
+            <thead>
+                <tr class="table100-head">
+                    <th class="column1">Date</th>
+                    <th class="column2">Order ID</th>
+                    <th class="column3">Name</th>
+                    <th class="column4">Price</th>
+                    <th class="column5">Quantity</th>
+                    <th class="column6">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="column1">2024-10-22</td>
+                    <td class="column2">200398</td>
+                    <td class="column3">iPhone X 64Gb Grey</td>
+                    <td class="column4">$999.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-23</td>
+                    <td class="column2">200397</td>
+                    <td class="column3">Samsung S8 Black</td>
+                    <td class="column4">$756.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$756.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-24</td>
+                    <td class="column2">200396</td>
+                    <td class="column3">Game Console Controller</td>
+                    <td class="column4">$22.00</td>
+                    <td class="column5">2</td>
+                    <td class="column6">$44.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-25</td>
+                    <td class="column2">200392</td>
+                    <td class="column3">USB 3.0 Cable</td>
+                    <td class="column4">$10.00</td>
+                    <td class="column5">3</td>
+                    <td class="column6">$30.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-26</td>
+                    <td class="column2">200391</td>
+                    <td class="column3">Smartwatch 4.0 LTE Wifi</td>
+                    <td class="column4">$199.00</td>
+                    <td class="column5">6</td>
+                    <td class="column6">$1494.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-27</td>
+                    <td class="column2">200390</td>
+                    <td class="column3">Camera C430W 4k</td>
+                    <td class="column4">$699.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$699.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-28</td>
+                    <td class="column2">200389</td>
+                    <td class="column3">Macbook Pro Retina 2017</td>
+                    <td class="column4">$2199.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$2199.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-29</td>
+                    <td class="column2">200388</td>
+                    <td class="column3">Game Console Controller</td>
+                    <td class="column4">$999.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-30</td>
+                    <td class="column2">200387</td>
+                    <td class="column3">iPhone X 64Gb Grey</td>
+                    <td class="column4">$999.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-10-31</td>
+                    <td class="column2">200386</td>
+                    <td class="column3">iPhone X 64Gb Grey</td>
+                    <td class="column4">$999.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$999.00</td>
+                </tr>
+                <tr>
+                    <td class="column1">2024-11-01</td>
+                    <td class="column2">200389</td>
+                    <td class="column3">Macbook Pro Retina 2017</td>
+                    <td class="column4">$2199.00</td>
+                    <td class="column5">1</td>
+                    <td class="column6">$2199.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+
 </html>
